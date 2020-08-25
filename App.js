@@ -22,6 +22,7 @@ import {
   Directions,
   State,
 } from 'react-native-gesture-handler';
+import Deck from './Deck';
 
 // https://www.creative-flyers.com
 const DATA = [
@@ -118,6 +119,7 @@ const OverflowItems = ({ data, scrollXAnimated }) => {
 };
 
 export default function App() {
+  return <Deck />;
   const [data, setData] = React.useState(DATA);
   const scrollXIndex = React.useRef(new Animated.Value(0)).current;
   const scrollXAnimated = React.useRef(new Animated.Value(0)).current;
